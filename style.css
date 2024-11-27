@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body{
-    font-family: "Roboto", serif;
+    font-family: 'Agrandir';
     margin: 0px;
     padding: 0px;
     height: 100vh;
     background-color: #f1efef;
 }
+
+/* Navbar */
 
 .navbar{
     height: 65px;
@@ -116,12 +117,15 @@ body{
 
 .seo .cart:hover{
     background-color: #e8e8e8;
+    fill: #e60073;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 svg{
     height: 23px;
 }
+
+/* Section-1 */
 
 .one{
     position: relative;
@@ -160,13 +164,40 @@ svg{
     box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
 }
 
-.one .main .search .ser{
-    height: 50px;
-    width: 550px;
-    font-size: 16px;
+.border{
+    display: flex;
+    width: 100%;
     border: 1px solid #ddd;
-    border-radius: 10px;
-    padding-left: 15px;
+    padding: 8px 15px;
+    border-radius: 11px;
+}
+
+.one .main .search .ser{
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #555;
+    padding: 10px;
+}
+
+.one .main .search .icon .locate svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: #e60073;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.icon span:hover{
+    color: #e60073;
 }
 
 .one .main .search .btn{
@@ -186,6 +217,8 @@ svg{
     background-color: #ff2b85;
     transform: scale(1.1);
 }
+
+/* Section-2 */
 
 .two{
     height: 95vh;
@@ -243,6 +276,8 @@ svg{
     transform: scale(1.1);
 }
 
+/* Section-3 */
+
 .three{
     width: 100%;
     display: flex;
@@ -269,7 +304,7 @@ svg{
 
 .three .city .box{
     height: 45px;
-    width: 145px;
+    width: 150px;
     background-color: white;
     display: flex;
     text-align: center;
@@ -295,6 +330,8 @@ svg{
 .three .city img:hover{
     transform: scale(1.1);
 }
+
+/* Section-4 */
 
 .four{
     height: 380px;
@@ -327,27 +364,30 @@ svg{
 }
 
 .four .item-1 .qrcode{
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     position: absolute;
-    top: 60px;
+    top: 65px;
 }
 
 .four .item-1 .qrcode img{
     height: 100%;
     width: 100%;
     mix-blend-mode: multiply;
+    border: 1px solid white;
+    border-radius: 12px;
+    padding: 10px;
 }
 
 .four .item-1 .para{
     justify-content: right;
     position: absolute;
     top: 45px;
-    right: 50px;
+    right: 0px;
 }
 
 .four .item-1 .para p{
-    font-size: 19px;
+    font-size: 17px;
     color: white;
 }
 
@@ -394,6 +434,8 @@ svg{
 .space{
     margin-top: 140px;
 }
+
+/* Section-4 */
 
 .five{
     height: 95vh;
@@ -451,6 +493,8 @@ svg{
     transform: scale(1.1);
 }
 
+/* Section-6 */
+
 .six{
     width: 85%;
     margin: 40px auto;
@@ -506,7 +550,7 @@ ul li::before {
     top: 0;
 }
 
-.highlight {
+.highlight{
     color: #ff2b85;
     font-weight: bold;
     cursor: pointer;
@@ -520,11 +564,23 @@ hr {
     margin: 30px 0;
 }
 
+/* Footer-1 */
+
 .footer {
     background-color: #f8f8f8;
-    padding: 20px;
     text-align: left;
-    border-top: 1px solid #ddd;
+    width: 85%;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.footer .top{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
 }
 
 .footer .links {
@@ -532,41 +588,98 @@ hr {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
+    
 }
 
 .footer .links div {
     flex: 1;
     min-width: 200px;
+    height: 420px;
+}
+
+.footer .links a{
+    margin: 20px auto;
+} 
+
+.footer .links .ddd{
+    color: #838383;
 }
 
 .footer a {
-    color: #007bff;
-    text-decoration: none;
+    color: #2d2c2c;
+    text-decoration: underline 1.5px;
+    font-weight: 500;
     display: block;
     margin: 5px 0;
+    font-size: 16px;
 }
 
-.footer a:hover {
-    text-decoration: underline;
-}
+/* Footer-2 */
 
-.footer-2 {
+.footer-2{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
     border-top: 1px solid #ddd;
-    padding-top: 10px;
-    font-size: 14px;
-    color: #666;
+    padding-top: 20px;
+    height: 100px;
 }
 
-.footer-2 .social {
+.footer-2 .box-1{
+    align-items: center;
     display: flex;
+    justify-content: center;
     gap: 10px;
 }
 
-.footer-2 .social img {
-    width: 20px;
-    height: 20px;
+.footer-2 .box-1 .hero , .logo-icon{
+    height: 30px;
+    cursor: pointer;
 }
+
+.vertical-line {
+    width: 1px;
+    height: 45px;
+    background-color: #999494;
+    margin: 20px 10px;
+} 
+
+
+.footer-2 .social {
+    display: flex;
+    gap: 20px;
+    padding: 50px;
+}
+
+.footer-2 .social .insta{
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.footer-2 .social .insta:hover{
+    background-color: #e8e8e8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+.footer-2 .social .facebook{
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.footer-2 .social .facebook:hover{
+    background-color: #e8e8e8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+
